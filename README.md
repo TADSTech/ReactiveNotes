@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+# Reaction Notes: Beta
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Reaction Notes is a minimalist web application built with React for creating, editing, and managing notes with a clean, responsive interface. It supports Markdown formatting, note searching, and exporting notes as `.txt` or `.md` files. The app is designed for simplicity and ease of use, with a focus on providing a seamless note-taking experience across desktop and mobile devices.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **User Registration**: Users are prompted to enter their name and email upon first use, with default values (`user` and `user@user.com`) if left blank. User data is saved in local storage.
+- **Note Management**:
+  - Create notes with a title and content.
+  - Edit notes in a sidebar (desktop) or full-screen (mobile) view.
+  - Delete multiple notes using a selection mode.
+- **Search Functionality**: Search notes by title or content with a toggleable content search option.
+- **Markdown Support**: Enable Markdown to format notes with headings, bold, italics, lists, code, etc., with a live preview.
+- **Export Notes**: Download individual notes as `.txt` or `.md` files.
+- **Responsive Design**: Optimized for both desktop and mobile devices, with a clean, dark-themed UI.
+- **Local Storage**: Notes and user preferences (e.g., Markdown toggle) are persisted in the browser's local storage.
+- **Branding**: Powered by TADSTech, with links to the project’s GitHub and TADSTech website in the footer.
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/TADSTech/ReactiveNotes.git
+   cd ReactiveNotes
+   ```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. **Install Dependencies**:
+   Ensure you have [Node.js](https://nodejs.org/) installed. Then, run:
+   ```bash
+   npm install
+   ```
+   This installs required packages, including `react`, `react-dom`, and `react-markdown`.
 
-### `npm test`
+3. **Start the Development Server**:
+   ```bash
+   npm start
+   ```
+   The app will run at `http://localhost:3000` in your browser.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4. **Build for Production** (optional):
+   ```bash
+   npm run build
+   ```
+   This generates a production-ready build in the `build` folder.
 
-### `npm run build`
+## Usage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Registration**:
+   - On first load, enter your name and email in the registration form. Defaults to `user` and `user@user.com` if left blank.
+   - Your details are saved and displayed in the welcome message.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Creating a Note**:
+   - Click the `+` icon in the navigation bar to open the note creation form.
+   - Enter a title and content, then click "Add Note" to save.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Editing a Note**:
+   - Click a note in the list to open it in the edit panel (sidebar on desktop, full-screen on mobile).
+   - Modify the title or content, then click "Save" or "Cancel".
 
-### `npm run eject`
+4. **Searching Notes**:
+   - Use the search bar above the notes list to filter by title.
+   - Check "Search in content" to include note content in the search.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+5. **Deleting Notes**:
+   - Click the select icon in the navigation bar to enter selection mode.
+   - Click notes to select them, then click "Delete Selected" to remove them.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+6. **Exporting Notes**:
+   - In the note edit panel, select "Text (.txt)" or "Markdown (.md)" from the export dropdown to download the note.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+7. **Markdown Support**:
+   - Toggle "Enable Markdown" in the search container to format notes using Markdown syntax.
+   - A live preview appears below the text area when editing a note.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Project Structure
 
-## Learn More
+- `src/App.js`: Main React component containing the app logic and UI.
+- `src/App.css`: Styles for the app, including responsive design for mobile devices.
+- `src/icons/`: Contains SVG icons for the add and select buttons.
+- `src/TADSDESKBG.png`: TADSTech logo used in the footer.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Dependencies
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `react`: Core React library for building the UI.
+- `react-dom`: For rendering React components to the DOM.
+- `react-markdown`: For rendering Markdown content with a live preview.
 
-### Code Splitting
+Install them using:
+```bash
+npm install react react-dom react-markdown
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Credits
 
-### Analyzing the Bundle Size
+- **Developed by**: Michael
+- **Powered by**: [TADSTech](https://tadstech.web.app)
+- **GitHub Repository**: [ReactiveNotes](https://github.com/TADSTech/ReactiveNotes)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## License
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
